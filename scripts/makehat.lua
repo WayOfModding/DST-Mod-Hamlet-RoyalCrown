@@ -67,11 +67,13 @@ local function MakeHat(name, fn, custom_init, prefabs)
       custom_init(inst)
     end
 
+    local tagAlias = "_hat"
+    inst:AddTag(tagAlias)
     inst.entity:SetPristine()
-
     if not TheWorld.ismastersim then
       return inst
     end
+    inst:RemoveTag(tagAlias)
 
     inst:AddComponent("inventoryitem")
     inst:AddComponent("inspectable")
