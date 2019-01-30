@@ -1,7 +1,7 @@
 local _G = GLOBAL
 local require = _G.require
 
-local DEBUG = false
+local DEBUG = true
 
 Assets =
 {
@@ -30,7 +30,7 @@ if DEBUG then
   AddPlayerPostInit(function(inst)
     -- Spawn items in tester's inventory
     if inst.components.inventory then
-      --giveitem("")
+      giveitem("pigcrownhat")
     end
   end)
 end
