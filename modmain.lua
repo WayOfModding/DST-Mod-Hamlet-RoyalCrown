@@ -12,6 +12,7 @@ PrefabFiles =
 }
 
 require "modstrings"
+require "modrecipes"
 
 --------------
 
