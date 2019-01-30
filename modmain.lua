@@ -9,6 +9,7 @@ Assets =
 
 PrefabFiles =
 {
+  "pigcrownhat",
 }
 
 require "modstrings"
