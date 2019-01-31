@@ -100,7 +100,9 @@ local function MakeHat(name, fn, custom_init, prefabs)
     Asset("ATLAS", "images/"..symname..".xml"),
   }
 
-  return Prefab(prefabname, fn(simple(custom_init or nil)) or default, assets, prefabs or nil)
+  return Prefab(prefabname, fn and function(Sim)
+    return fn(simple(custom_init or nil))
+  end or default, assets, prefabs or nil)
 end
 
 return MakeHat("pigcrown", function(inst)
