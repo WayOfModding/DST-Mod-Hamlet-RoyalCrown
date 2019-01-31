@@ -9,7 +9,7 @@ Assets =
 
 PrefabFiles =
 {
-  "pigcrownhat",
+  "modhats",
 }
 
 require "modstrings"
