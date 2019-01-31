@@ -94,7 +94,11 @@ local function MakeHat(name, fn, custom_init, prefabs)
     return simple()
   end
 
-  local assets = { Asset("ANIM", "anim/"..fname..".zip") }
+  local assets =
+  {
+    Asset("ANIM", "anim/"..fname..".zip"),
+    Asset("ATLAS", "images/"..symname..".xml"),
+  }
 
   return Prefab(prefabname, fn(simple(custom_init or nil)) or default, assets, prefabs or nil)
 end
