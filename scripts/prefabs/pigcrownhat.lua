@@ -1,4 +1,4 @@
-local MakeHat = require("makehat")
+local MakeHat = require("modhats")
 
 return MakeHat("pigcrown", function(inst)
   inst.components.equippable.dapperness = TUNING.DAPPERNESS_SUPERHUGE
