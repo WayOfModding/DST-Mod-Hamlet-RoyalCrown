@@ -20,7 +20,8 @@ require "modrecipes"
 if DEBUG then
   local SpawnPrefab = _G.SpawnPrefab
 
-  local function giveitem(item_name)
+  local function giveitem(inst, item_name)
+    if not inst then return end
     local item = SpawnPrefab(item_name)
     if item then
       inst.components.inventory:GiveItem(item)
@@ -30,7 +31,7 @@ if DEBUG then
   AddPlayerPostInit(function(inst)
     -- Spawn items in tester's inventory
     if inst.components.inventory then
-      giveitem("pigcrownhat")
+      giveitem(inst, "pigcrownhat")
     end
   end)
 end
