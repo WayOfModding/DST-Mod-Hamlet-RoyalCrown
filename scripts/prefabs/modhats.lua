@@ -48,6 +48,8 @@ local function MakeHat(name, fn, custom_init, prefabs)
     end
   end
 
+  local imageAtlas = "images/"..symname..".xml"
+
   local function simple(custom_init)
     local inst = CreateEntity()
 
@@ -76,6 +78,8 @@ local function MakeHat(name, fn, custom_init, prefabs)
     inst:RemoveTag(tagAlias)
 
     inst:AddComponent("inventoryitem")
+    inst.components.inventoryitem.atlasname = imageAtlas
+
     inst:AddComponent("inspectable")
 
     inst:AddComponent("tradable")
@@ -97,7 +101,7 @@ local function MakeHat(name, fn, custom_init, prefabs)
   local assets =
   {
     Asset("ANIM", "anim/"..fname..".zip"),
-    Asset("ATLAS", "images/"..symname..".xml"),
+    Asset("ATLAS", imageAtlas),
   }
 
   return Prefab(prefabname, fn and function(Sim)
