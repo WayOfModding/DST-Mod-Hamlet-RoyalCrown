@@ -14,3 +14,34 @@ Recipe(
   nil,
   "images/pigcrownhat.xml" -- atlas
 )
+
+Recipe(
+  "antmaskhat",
+  {
+    Ingredient("chitin", 5),
+    Ingredient("footballhat", 1)
+  },
+  RECIPETABS.WAR,
+  TECH.SCIENCE_ONE
+  nil,
+  nil,
+  nil,
+  nil,
+  nil,
+  "images/antmaskhat.xml" -- atlas
+)
+Recipe(
+  "antsuit",
+  {
+    Ingredient("chitin", 5),
+    Ingredient("armorwood", 1)
+  },
+  RECIPETABS.WAR,
+  TECH.SCIENCE_ONE
+  nil,
+  nil,
+  nil,
+  nil,
+  nil,
+  "images/antsuit.xml" -- atlas
+)
