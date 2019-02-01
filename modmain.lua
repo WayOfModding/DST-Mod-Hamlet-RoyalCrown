@@ -1,7 +1,7 @@
 local _G = GLOBAL
 local require = _G.require
 
-local DEBUG = true
+local DEBUG = false
 
 Assets =
 {
