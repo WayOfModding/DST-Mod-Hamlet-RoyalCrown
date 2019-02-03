@@ -64,6 +64,7 @@ local function MakeHat(name, fn, custom_init, prefabs)
     inst.AnimState:PlayAnimation("anim")
 
     inst:AddTag("hat")
+    inst:AddTag(name)
 
     if custom_init ~= nil then
       custom_init(inst)
@@ -110,7 +111,8 @@ local function MakeHat(name, fn, custom_init, prefabs)
 end
 
 return MakeHat("pigcrown", function(inst)
-  inst.components.equippable.dapperness = TUNING.DAPPERNESS_SUPERHUGE
-  inst:AddTag("pigcrown")
-  return inst
+  if TheWorld.ismastersim then
+    inst.components.equippable.dapperness = TUNING.DAPPERNESS_SUPERHUGE
+    return inst
+  end
 end)
