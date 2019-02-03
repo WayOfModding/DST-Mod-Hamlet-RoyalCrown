@@ -15,6 +15,7 @@ Recipe(
   "images/pigcrownhat.xml" -- atlas
 )
 
+--[[
 Recipe(
   "antmaskhat",
   {
@@ -45,3 +46,4 @@ Recipe(
   nil,
   "images/antsuit.xml" -- atlas
 )
+--]]
