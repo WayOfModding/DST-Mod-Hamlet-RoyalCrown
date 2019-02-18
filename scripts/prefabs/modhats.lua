@@ -112,7 +112,9 @@ end
 
 return MakeHat("pigcrown", function(inst)
   if TheWorld.ismastersim then
-    inst.components.equippable.dapperness = TUNING.DAPPERNESS_SUPERHUGE
+    if TUNING.DAPPERNESS_PIGCROWNHAT then
+      inst.components.equippable.dapperness = TUNING.DAPPERNESS_PIGCROWNHAT
+    end
   end
   return inst
 end)

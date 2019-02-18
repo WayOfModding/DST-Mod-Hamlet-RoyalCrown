@@ -8,7 +8,7 @@ description = "Royal Crown from Hamlet DLC of Don't Starve."
 author = "KaiserKatze"
 
 --A version number so you can ask people if they are running an old version of your mod.
-version = "1.0.2"
+version = "1.0.3"
 
 --This lets other players know if your mod is out of date. This typically needs to be updated every time there's a new game update.
 api_version = 10
@@ -28,3 +28,21 @@ icon_atlas = "modicon.xml"
 icon = "modicon.tex"
 
 forumthread = ""
+
+configuration_options =
+{
+  {
+  name = "SANITY_RATE",
+  label = "Restore Sanity",
+  hover = "How fast you restore your sanity",
+  options =
+    {
+      {description = "Disabled", data = 0},
+      {description = "Normal", data = 1},
+      {description = "Large", data = 2},
+      {description = "Huge", data = 1},
+      {description = "Super Huge", data = 2},
+    },
+    default = 1,
+  },
+}

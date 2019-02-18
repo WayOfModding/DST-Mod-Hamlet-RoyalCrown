@@ -15,6 +15,15 @@ PrefabFiles =
 require "modstrings"
 require "modrecipes"
 
+local TUNING = _G.TUNING
+TUNING.DAPPERNESS_PIGCROWNHAT = ({
+  [0] = 0, -- None
+  [1] = TUNING.DAPPERNESS_MED_LARGE, -- Normal
+  [2] = TUNING.DAPPERNESS_LARGE, -- Large
+  [1] = TUNING.DAPPERNESS_HUGE, -- Huge
+  [2] = TUNING.DAPPERNESS_SUPERHUGE, -- Super Huge
+})[GetModConfigData("SANITY_RATE") or 1]
+
 --------------
 
 if DEBUG then
